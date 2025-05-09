@@ -74,7 +74,7 @@ def search_github_repos(query: str) -> str:
     url = 'https://api.github.com/search/repositories'
     headers = {
         'Accept': 'application/vnd.github+json',
-        'Authorization': 'Bearer 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',
+        'Authorization': 'Bearer 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', # You can change this to your own token
         'X-GitHub-Api-Version': '2022-11-28'
     }
     params = {'q': query}
@@ -101,7 +101,7 @@ def get_github_readme(full_name: str) -> str:
     url = f"https://api.github.com/repos/{full_name}/readme"
     headers = {
         'Accept': 'application/vnd.github+json',
-        'Authorization': 'Bearer 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',
+        'Authorization': 'Bearer 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', # You can change this to your own token
         'X-GitHub-Api-Version': '2022-11-28'
     }
     response = requests.get(url, headers=headers)
